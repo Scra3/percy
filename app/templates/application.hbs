@@ -7,6 +7,12 @@
       placeholder="What needs to be done?"
       autofocus
     >
+    <input
+      class="new-todo"
+      {{on "keyup" this.createTodo}}
+      placeholder="What needs to be done?"
+      autofocus
+    >
   </header>
   {{outlet}}
   {{#if (gt @model.length 0)}}
