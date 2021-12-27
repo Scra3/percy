@@ -1762,10 +1762,6 @@ module('TodoMVC', function (hooks) {
 
     assert.dom('.todo-count').hasText('1 item left');
 
-    await click('input.toggle');
-
-    assert.dom('.todo-count').hasText('0 items left');
-
     await percySnapshot(assert, { widths: [768, 992, 1200] });
   });
   test('Lets you check off a todo 155', async function (assert) {
